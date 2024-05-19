@@ -11,32 +11,32 @@
 
 const questions = [
     {
-        question: 'Скільки буде 2+2?',
+        text: 'Скільки буде 2+2?',
         answer: '4'
     },
     {
-        question: 'Сонце встає на сході?',
+        text: 'Сонце встає на сході?',
         answer: 'так'
     },
     {
-        question: 'Скільки буде 5 / 0?',
+        text: 'Скільки буде 5 / 0?',
         answer: 'нескінченність'
     },
     {
-        question: 'Якого кольору небо?',
+        text: 'Якого кольору небо?',
         answer: 'блакитний'
     },
     {
-        question: 'Яка правильна відповідь на головне питання життя, всесвіту та всього такого.',
+        text: 'Яка правильна відповідь на головне питання життя, всесвіту та всього такого.',
         answer: '42'
     },
 ]
 
 let points = 0;
 
-for (let stage of questions) {
-    const answer = prompt(stage.question)?.trim()?.toLowerCase();
-    if (answer === stage.answer) points += 10;
+for (let question of questions) {
+    const answer = prompt(question.text)?.trim()?.toLowerCase();
+    if (answer === question.answer) points += 10;
 }
 
 alert(`You score is ${points}`);
