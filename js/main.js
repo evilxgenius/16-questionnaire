@@ -35,7 +35,7 @@ const questions = [
 let points = 0;
 
 for (let stage of questions) {
-    const answer = prompt(stage.question)?.trim();
+    const answer = prompt(stage.question)?.trim()?.toLowerCase();
     if (answer === stage.answer) points += 10;
 }
 
